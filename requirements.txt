@@ -1,0 +1,18 @@
+streamlit
+numpy
+pandas
+# Face Recognisation libraries
+dlib-bin
+
+git+https://github.com/ageitgey/face_recognition_models
+setuptools<70.0.0
+
+supabase # I t is a database that we use
+bcrypt #It is use to securely store the password
+
+segno #This library is use for generate the QR code
+pillow #it is use for opening, creating, editing, and saving images in Python.
+
+ 
+librosa
+resemblyzer
