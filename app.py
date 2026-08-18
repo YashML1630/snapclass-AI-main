@@ -15,7 +15,7 @@ def main():
             teacher_screen()
         case "student":
             student_screen()
-        case none:
+        case None:
             home_screen()
 
     join_code = st.query_params.get('join-code')
