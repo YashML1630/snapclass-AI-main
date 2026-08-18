@@ -5,7 +5,14 @@ import time
 @st.dialog("Enroll in subject")
 def enroll_dialog():
     st.write("Enter the subject code provided by your teacher to enroll")
-    join_code = st.text_input('subject_code',placeholder='e.g. cs101')
+    if join_code:
+        join_code = join_code.strip().upper()
+        st.info(f"Joining subject: {join_code}")
+    else:
+        join_code = st.text_input(
+            'subject_code',
+            placeholder='e.g. CS101'
+        )
 
     if st.button('Enrol now',type='primary',width='stretch'):
         if join_code:
