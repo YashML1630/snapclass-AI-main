@@ -4,7 +4,7 @@ from src.components.header import header_dashboard
 from src.components.footer import footer_dashboard
 import numpy as np
 from PIL import Image
-from src.pipelines.face_pipeline import predict_attendance,get_face_embeddings,train_classifier
+from src.pipelines.face_pipeline import predict_attendance,get_face_embeddings
 from src.pipelines.voice_pipeline import get_voice_embedding
 from src.database.db import get_all_students,create_student,get_student_subjects,get_student_attendance,unenroll_student_to_subject
 import time
@@ -148,7 +148,7 @@ def student_screen():
                                 voice_emb = get_voice_embedding(audio_data.read())
                             response_data = create_student(new_name,face_embedding=face_emb, voice_embedding = voice_emb)
                             if response_data:
-                                train_classifier()
+                                
                                 st.session_state.is_logged_in = True
                                 st.session_state.user_role = 'student'
                                 st.session_state.student_data = response_data[0]
